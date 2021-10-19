@@ -1,0 +1,43 @@
+name: ci 
+on:
+  push:
+    branches: 
+      - master
+jobs:
+  deploy:
+    runs-on: windows-latest
+    steps:
+      # - uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.302
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      - name: Run with dotnet
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.repo }}
+        run: |
+          git clone --depth 1 https://github.com/ciyuanhuixing/MarkdownToTreeBlog.git
+          git clone -b master https://${GH_TOKEN}@github.com/ciyuanhuixing/docs.git
+          cp -r MarkdownToTreeBlog/MarkdownToTreeBlog/themes themes
+          rm MarkdownToTreeBlog/MarkdownToTreeBlog/App.config
+          mv MarkdownToTreeBlog/MarkdownToTreeBlog/AppDeploy.config MarkdownToTreeBlog/MarkdownToTreeBlog/App.config
+          ls
+          dotnet run -p MarkdownToTreeBlog/MarkdownToTreeBlog
+          cp MarkdownToTreeBlog/MarkdownToTreeBlog/gulpfile.js ./
+          cp MarkdownToTreeBlog/MarkdownToTreeBlog/package.json ./
+          npm install
+          gulp
+          cd site
+          git config --global user.email "ciyuanhuixing@qq.com"
+          git config --global user.name "ciyuanhuixing"
+          git init
+          git add -A
+          git commit -m "first"
+          git remote add origin https://${GH_TOKEN}@github.com/ciyuanhuixing/site.git
+          git branch -M main
+          git push -u origin main -f

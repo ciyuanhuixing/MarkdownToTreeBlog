@@ -1,0 +1,93 @@
+﻿@using RazorLight
+@using MarkdownToTreeBlog;
+@inherits TemplatePage<DocViewModel>
+@{
+    Layout = "main.cshtml";
+}
+@section header{
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/styles/default.min.css">
+}
+@section breadcrumbNav{@{ await IncludeAsync("_breadcrumb-item.cshtml", Model.Doc); }}
+<article id="article">
+    <header>
+        <h1>@Raw(Model.Doc.Title)</h1>
+        @{string dateFormat = "yyyy年M月d日"; }
+        <div class="article-meta">
+            <span>写于@(Raw(Model.Doc.CreatedTime.ToString(dateFormat)))</span>
+            @if (Model.Doc.ModifiedTime.HasValue && Model.Doc.ModifiedTime?.Date != Model.Doc.CreatedTime.Date)
+            {
+                <span>最后修改于@(Raw(Model.Doc.ModifiedTime?.ToString(dateFormat)))</span>
+            }
+        </div>
+    </header>
+    <div class="article-body">
+        @if (Model.Doc.TOC != null)
+        {
+            <p>本文目录：</p>
+            <ol class="toc">
+                @foreach (var tocH2 in Model.Doc.TOC)
+                {
+                    <li>
+                        <a href="#@tocH2.Anchor">@Raw(tocH2.Title)</a>
+                        @if (tocH2.H3s != null)
+                        {
+                            <ol>
+                                @foreach (var tocItem in tocH2.H3s)
+                                {
+                                    <li>
+                                        <a href="#@tocItem.Anchor">@Raw(tocItem.Title)</a>
+                                    </li>
+                                }
+                            </ol>
+                        }
+                    </li>
+                }
+            </ol>
+        }
+        @Raw(Model.Doc.Content)
+        @*<p class="end-tip">本文完</p>
+        <p class="article-link">作者：<a href="@Model.CommonInfo.SiteURL">@Raw(Model.CommonInfo.Author)</a>，链接：<a href="@Model.Doc.URL">@Model.CommonInfo.URL</a></p>
+        <figure id="qrcode"></figure>*@
+    </div>
+    @if (Model.Doc.Previous != null || Model.Doc.Next != null)
+    {
+        <div id="pre-next">
+            @if (Model.Doc.Previous != null)
+            {
+                <div>上篇：<a href="@Model.Doc.Previous.URL">@Raw(Model.Doc.Previous.Title)</a></div>
+            }
+            else
+            {
+                <div>已无上篇，<a href="/">回到主页</a></div>
+            }
+            @if (Model.Doc.Next != null)
+            {
+                <div>下篇：<a href="@Model.Doc.Next.URL">@Raw(Model.Doc.Next.Title)</a></div>
+            }
+            else
+            {
+                <div>已无下篇，<a href="/">回到主页</a></div>
+            }
+        </div>
+    }
+</article>
+@section footer{
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    @*<script src="https://cdn.jsdelivr.net/gh/zydhx/files@main/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/zydhx/files@main/qrcode.min.js"></script>
+    <script type="text/javascript">
+        var fig = document.getElementById("qrcode");
+        var qrcode = new QRCode(fig, {
+            text: "@Model.CommonInfo.URL",
+            width: 128,
+            height: 128,
+            colorDark: "#000000",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+        var figCap = document.createElement("figcaption");
+        figCap.innerText = "长按扫码查看本文";
+        fig.appendChild(figCap);
+    </script>*@
+}

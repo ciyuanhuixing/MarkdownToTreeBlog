@@ -1,0 +1,21 @@
+﻿@using RazorLight
+@using System.Collections.Generic;
+@using MarkdownToTreeBlog;
+@inherits TemplatePage<PathNode>
+@foreach (var item in Model.Children)
+{
+    if (item is DirNode)
+    {
+        <li id="@item.Anchor">
+            <span class="t-num">@(item.Anchor.Replace('-','.')+(item.level>1?string.Empty:"."))</span><span>@Raw(item.Title)</span>
+            <ol>
+                @{ await IncludeAsync("_index-list.cshtml", item); }
+            </ol>
+        </li>
+    }
+    else if (item is Doc)
+    {
+        var doc = item as Doc;
+        <li><a href="@doc.URL"><span class="t-num">@(item.Anchor.Replace('-','.')+(item.level>1?string.Empty:"."))</span>@Raw(doc.Title)<span class="date">@doc.CreatedTime.ToString("yyyy-MM")</span></a></li>
+    }
+}

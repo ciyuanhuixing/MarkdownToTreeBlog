@@ -1,0 +1,15 @@
+﻿@using RazorLight
+@using MarkdownToTreeBlog;
+@inherits TemplatePage<PathNode>
+@if (Model == null || Model.Parent == null) return;
+@{
+    await IncludeAsync("_breadcrumb-item.cshtml", Model.Parent);
+    string url = $"/#{Model.Anchor}";
+    string title = Model.Title;
+    if (Model.Children == null)
+    {
+        url = "#article";
+        title = string.Empty;
+    }
+}
+<a href="@url"><span class="t-num">@(Model.Anchor.Replace('-','.')+(Model.level>1?string.Empty:"."))</span>@Raw(title)</a>

@@ -1,0 +1,11 @@
+﻿@using RazorLight
+@using System.Collections.Generic;
+@using MarkdownToTreeBlog;
+@inherits TemplatePage<IndexViewModel>
+@{
+    Layout = "main.cshtml";
+}
+@*@section breadcrumbNav{<a href="#index-tree">全部笔记</a>}*@
+<ol id="index-tree">
+    @{ await IncludeAsync("_index-list.cshtml", Model.PathRoot); }
+</ol>

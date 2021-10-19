@@ -1,0 +1,57 @@
+﻿@using RazorLight
+@using MarkdownToTreeBlog
+@inherits TemplatePage<ViewModel>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@Raw(Model.CommonInfo.Title)</title>
+    @foreach (var meta in Model.CommonInfo.Meta)
+    {
+        if (meta.Key.StartsWith("og:") || meta.Key.StartsWith("article:"))
+        {
+            <meta property="@meta.Key" content="@Raw(meta.Value)" />
+        }
+        else
+        {
+            <meta name="@meta.Key" content="@Raw(meta.Value)" />
+        }
+    }
+    <link rel="shortcut icon" href="/favicon.webp">
+    <link rel="stylesheet" type="text/css" href="/css/site.css" />
+    @RenderSection("header", false)
+</head>
+<body>
+    <header id="site-header"><a id="site-brand" href="/"><img id="brand-avatar" src="/favicon.webp" alt="@Raw(Model.CommonInfo.Author)" />@Raw(Model.CommonInfo.SiteName)</a>@RenderSection("breadcrumbNav", false)</header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <p>Copyright &copy; 2017 - @System.DateTime.Now.Year @Raw(Model.CommonInfo.Author)</p>
+        @*<p>本网站由@(Raw(Model.CommonInfo.Author))编码与设计。</p>*@
+    </footer>@RenderSection("footer", false)
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8683734894039526dca70045f22444d7";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
