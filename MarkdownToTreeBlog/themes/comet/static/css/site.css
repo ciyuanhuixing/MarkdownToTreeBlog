@@ -243,9 +243,6 @@ ol#index-tree, ol#index-tree ol{
     list-style-type: none;
 }
 ol#index-tree{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     padding: 0;
 }
 ol#index-tree ol{
@@ -297,9 +294,9 @@ ol#index-tree span.date{
 ol#index-tree>li{
     background-color: white;
     border-radius: 10px;
-    margin: 2rem 1% 0;
+    width: 800px;
+    margin: 2rem auto 0;
     padding: 2%;
-    flex: 0 0 47%;
     box-sizing: border-box;
 }
 @media (max-width: 768px) {
@@ -315,9 +312,6 @@ ol#index-tree>li{
     }
     .article-meta,article .end-tip, article .article-link,.fig-img figcaption,#qrcode figcaption{
         font-size: 13px;        
-    }
-    ol#index-tree{
-        display: block;
     }
     ol#index-tree>li{
         border-radius: 0;
