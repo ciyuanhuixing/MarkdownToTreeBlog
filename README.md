@@ -4,7 +4,7 @@
 
 文档：[Markdown To Tree Blog 使用文档](https://ciyuanhuixing.com/20211019-1943/)
 
-我曾经使用过的支持 Markdown 文件的静态网站生成器包括 Hexo、Hugo、Vuepress、MkDocs，使用这些工具时，我很难实现让博客文章目录自动与 Markdown 文件所在目录相对应，所以就自己写了这个工具。
+我曾经用过 Hexo 这个能将 Markdown 文件转为静态博客的工具，在使用它的过程中，我经常需要维护博客的文章分类，比较繁琐，所以想让生成的博客具有与 Markdown 文件所在目录自动相对应的树形文章目录，但我用 Hexo 无法实现。后面又折腾过 Hugo、Vuepress、MkDocs，也都无功而返，所以就尝试自己写了这个工具。
 
 **Markdown To Tree Blog 的特点：**
 
