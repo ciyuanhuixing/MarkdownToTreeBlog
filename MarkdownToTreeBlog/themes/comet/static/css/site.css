@@ -294,7 +294,7 @@ ol#index-tree span.date{
     font-size: 12px;
 }
 ol#index-tree>li{
-    background-color: #f8f8fa;
+    background-color: white;
     border-radius: 10px;
     margin: 2rem 1% 0;
     padding: 2%;
