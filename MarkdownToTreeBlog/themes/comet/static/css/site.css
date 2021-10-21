@@ -294,7 +294,6 @@ ol#index-tree span.date{
 ol#index-tree>li{
     background-color: white;
     border-radius: 10px;
-    width: 800px;
     margin: 2rem auto 0;
     padding: 2%;
     box-sizing: border-box;
@@ -365,6 +364,9 @@ ol#index-tree>li{
     article{
         width: 800px;
         border-radius: 10px;
+    }
+    ol#index-tree>li{
+        width: 800px;
     }
     .fig-img img{
         max-height: 90vh;
