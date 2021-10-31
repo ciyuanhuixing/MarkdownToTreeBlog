@@ -11,7 +11,7 @@ jobs:
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 5.0.302
+          dotnet-version: 5.0.402
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
@@ -22,7 +22,7 @@ jobs:
           GH_TOKEN: ${{ secrets.repo }}
         run: |
           git clone --depth 1 https://github.com/ciyuanhuixing/MarkdownToTreeBlog.git
-          git clone -b master https://${GH_TOKEN}@github.com/ciyuanhuixing/docs.git
+          git clone --depth 1 -b master https://github.com/ciyuanhuixing/Notes.git
           cp -r MarkdownToTreeBlog/MarkdownToTreeBlog/themes themes
           rm MarkdownToTreeBlog/MarkdownToTreeBlog/App.config
           mv MarkdownToTreeBlog/MarkdownToTreeBlog/AppDeploy.config MarkdownToTreeBlog/MarkdownToTreeBlog/App.config
