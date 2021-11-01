@@ -1,0 +1,18 @@
+name: sync
+on: push
+jobs:
+  sync:
+    runs-on: windows-latest
+    steps:
+      - name: Run
+        shell: bash
+        env:
+          REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+          git clone https://${{ secrets.GH_TOKEN }}@github.com/ciyuanhuixing/${REPO_NAME}.git
+          cd ${REPO_NAME}
+          git switch ${GITHUB_REF##*/}
+          git remote add gt https://ciyuanhuixing:${{ secrets.GT_TOKEN }}@gitee.com/ciyuanhuixing/${REPO_NAME}.git
+          # echo "https://gitee.com/api/v5/user/repos?access_token=${{ secrets.GT_TOKEN }}&name=$REPO_NAME&private=true&path=$REPO_NAME"
+          curl --location --request POST "https://gitee.com/api/v5/user/repos?access_token=${{ secrets.GT_TOKEN }}&name=$REPO_NAME&private=true&path=$REPO_NAME"
+          git push -u gt HEAD
