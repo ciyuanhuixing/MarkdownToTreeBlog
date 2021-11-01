@@ -1,5 +1,5 @@
 html, p {
-    font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif !important;
+    font-family: Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif !important;
     font-size: 14px;
     text-align: justify;
     line-height: 1.6;
@@ -42,7 +42,7 @@ a#site-brand::after{
     vertical-align: middle;
 }
 #site-header a:hover{
-    color: #1772b4;
+    color: #178bcf;
 }
 
 article{
@@ -72,7 +72,7 @@ article{
 }
 
 a {
-    color: #1772b4;
+    color: #178bcf;
     text-decoration: none;
 }
 
@@ -131,7 +131,7 @@ article pre code{
     border-radius: 6px;
 }
 code{
-    font-family: Consolas,-apple-system,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif !important;
+    font-family: Consolas,Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif !important;
     color: #e96900;
     padding: 0 4px;
     background-color: #f8f8f8;
@@ -170,7 +170,7 @@ ol.toc li{
 }
 
 blockquote {
-    border-left: 2px solid #1772b4a6;
+    border-left: 2px solid #178bcfa6;
     padding: 0 15px;
 }
 blockquote p{
@@ -260,7 +260,7 @@ ol#index-tree>li>ol li:before {
     height: 1.4rem;
     border-style: none none solid solid;
     border-width: 0.2rem;
-    border-color: #1772b4;
+    border-color: #178bcf;
 }
 ol#index-tree>li>ol li:not(:last-child):after {
     position: absolute;
@@ -270,17 +270,17 @@ ol#index-tree>li>ol li:not(:last-child):after {
     bottom: 0;
     border-style: none none none solid;
     border-width: 0.2rem;
-    border-color: #1772b4;
+    border-color: #178bcf;
 }*/
 ol#index-tree,ol#index-tree a{
     color: #333;
     line-height: 2.5rem;
 }
 ol#index-tree a:hover{
-    color: #1772b4;
+    color: #178bcf;
 }
 span.t-num {
-    color: #1772b4;
+    color: #178bcf;
 }
 span.t-num:after{
     content: '\00A0';
