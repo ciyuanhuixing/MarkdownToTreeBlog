@@ -104,7 +104,7 @@ article table,
 article pre,
 #pre-next,
 article figure {
-    margin: 1rem 8px 0.5rem;
+    margin: 1rem 8px;
 }
 
 article ul,
@@ -153,14 +153,17 @@ ol {
     padding: 0;
 }
 ol ol, ul ul, ol ul, ul ol{
-    padding-left: 20px;
+    padding-left: 1.25em;
+}
+li p{
+    margin: 0;
 }
 .article-body>ul,.article-body>ol{
-    padding-left: 20px;
+    padding-left: 1.25em;
 }
-.article-body>ul,.article-body>ol,.article-body>ul p,.article-body>ol p{
+/* .article-body>ul,.article-body>ol,.article-body>ul p,.article-body>ol p{
     font-size: 13px;
-}
+} */
 ol.toc li{
     list-style-type: none;
 }
@@ -246,7 +249,7 @@ ol#index-tree{
     font-weight: bold;
 }
 ol#index-tree ol{
-    padding-left: 1rem;
+    padding-left: 1em;
 }
 /*ol#index-tree>li>ol li{
     position: relative;
@@ -371,9 +374,9 @@ ol#index-tree>li{
     .fig-img img{
         max-height: 90vh;
     }
-    .article-body>ul,.article-body>ol,.article-body>ul p,.article-body>ol p{
+    /* .article-body>ul,.article-body>ol,.article-body>ul p,.article-body>ol p{
         font-size: 14px;
-    }
+    } */
     h1 {
         font-size: 22px;
     }
