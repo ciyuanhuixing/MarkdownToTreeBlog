@@ -46,9 +46,9 @@ a#site-brand::after{
 }
 
 article{
-    margin: 2rem auto;
+    margin: 1rem auto;
     background-color: white;
-    padding: 2rem;
+    padding: 0.5rem 1.5rem;
     box-sizing: border-box;
 }
 .article-body{
@@ -152,7 +152,6 @@ ol {
     padding: 0;
 }
 ol ol, ul ul, ol ul, ul ol{
-    margin-bottom: 0.5rem;
     padding-left: 20px;
 }
 .article-body>ul,.article-body>ol{
@@ -273,7 +272,7 @@ ol#index-tree>li>ol li:not(:last-child):after {
 }*/
 ol#index-tree,ol#index-tree a{
     color: #222;
-    line-height: 2.5rem;
+    line-height: 2;
 }
 ol#index-tree a:hover{
     color: #178bcf;
@@ -282,34 +281,34 @@ span.t-num {
     color: #178bcf;
 }
 span.t-num:after{
-    content: '\00A0';
+    content: '\00A0\00A0';
 }
 span.date:before{
     content: '\00A0\00A0';
 }
 ol#index-tree span.date{
     font-size: 12px;
+    color: #ccc;
 }
 ol#index-tree>li{
     background-color: white;
     border-radius: 10px;
-    margin: 2rem auto 0;
-    padding: 2%;
+    margin: 1rem auto 0;
+    padding: 1rem;
     box-sizing: border-box;
+}
+.article-meta,article .end-tip, article .article-link,.fig-img figcaption,#qrcode figcaption{
+    font-size: 13px;        
+}
+#site-header a,footer p, ol#index-tree, ol#index-tree a {
+    font-size: 12px;
 }
 @media (max-width: 768px) {
     #site-header{
         padding: 0 10px;
     }
-    #site-header a,footer p, ol#index-tree, ol#index-tree a {
-        font-size: 12px;
-        font-weight: normal;
-    }
     article{
         padding: 14px;
-    }
-    .article-meta,article .end-tip, article .article-link,.fig-img figcaption,#qrcode figcaption{
-        font-size: 13px;        
     }
     ol#index-tree>li{
         border-radius: 0;
@@ -332,6 +331,9 @@ ol#index-tree>li{
 @media (min-width: 769px) {
     html,p{
         font-size: 15px;
+    }
+    #site-header a,footer p, ol#index-tree, ol#index-tree a {
+        font-size: 13px;
     }
     .article-meta,article .end-tip, article .article-link,.fig-img figcaption,#qrcode figcaption,footer p{
         font-size: 14px;        
@@ -356,6 +358,9 @@ ol#index-tree>li{
 @media (min-width: 1200px) {
     html,p{
         font-size: 16px;
+    }
+    #site-header a,footer p, ol#index-tree, ol#index-tree a {
+        font-size: 14px;
     }
     .article-meta,article .end-tip, article .article-link,.fig-img figcaption,#qrcode figcaption,footer p{
         font-size: 15px;        
