@@ -153,7 +153,8 @@ ol {
     padding: 0;
 }
 ol ol, ul ul, ol ul, ul ol{
-    padding-left: 1.25em;
+    padding-left: 1em;
+    margin: 0;
 }
 li p{
     margin: 0;
