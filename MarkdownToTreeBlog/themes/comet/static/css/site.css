@@ -51,9 +51,6 @@ article{
     padding: 0.5rem 1.5rem;
     box-sizing: border-box;
 }
-.article-body{
-    padding-top: 0.8rem;
-}
 
 .fig-img{
     padding: 0;
@@ -95,7 +92,7 @@ h4 {
 h2,
 h3,
 h4 {
-    margin: 2rem 8px 1.2rem;
+    margin: 1.5rem 8px 1rem;
     font-weight: bold;
     line-height: 1.6;
 }
@@ -120,7 +117,7 @@ article dl{
     justify-content: center;
     flex-wrap: wrap;
     font-size: 14px;
-    margin-top: 2rem;
+    margin: 2rem 0;
 }
 .article-meta span{
     margin: 0 20px;
@@ -242,6 +239,7 @@ ol#index-tree, ol#index-tree ol{
 }
 ol#index-tree{
     padding: 0;
+    font-weight: bold;
 }
 ol#index-tree ol{
     padding-left: 1rem;
@@ -273,6 +271,9 @@ ol#index-tree>li>ol li:not(:last-child):after {
 ol#index-tree,ol#index-tree a{
     color: #222;
     line-height: 2;
+}
+ol#index-tree a{
+    font-weight: normal;
 }
 ol#index-tree a:hover{
     color: #178bcf;
@@ -329,21 +330,9 @@ ol#index-tree>li{
     }
 }
 @media (min-width: 769px) {
-    html,p{
-        font-size: 15px;
-    }
-    #site-header a,footer p, ol#index-tree, ol#index-tree a {
-        font-size: 13px;
-    }
-    .article-meta,article .end-tip, article .article-link,.fig-img figcaption,#qrcode figcaption,footer p{
-        font-size: 14px;        
-    }
     article{
         width: 768px;
         border-radius: 10px;
-    }
-    .article-body>ul,.article-body>ol,.article-body>ul p,.article-body>ol p{
-        font-size: 14px;
     }
     h2 {
         font-size: 17px;
@@ -357,13 +346,13 @@ ol#index-tree>li{
 }
 @media (min-width: 1200px) {
     html,p{
-        font-size: 16px;
+        font-size: 15px;
     }
     #site-header a,footer p, ol#index-tree, ol#index-tree a {
         font-size: 14px;
     }
     .article-meta,article .end-tip, article .article-link,.fig-img figcaption,#qrcode figcaption,footer p{
-        font-size: 15px;        
+        font-size: 14px;        
     }
     article{
         width: 800px;
@@ -376,7 +365,7 @@ ol#index-tree>li{
         max-height: 90vh;
     }
     .article-body>ul,.article-body>ol,.article-body>ul p,.article-body>ol p{
-        font-size: 15px;
+        font-size: 14px;
     }
     h2 {
         font-size: 18px;
