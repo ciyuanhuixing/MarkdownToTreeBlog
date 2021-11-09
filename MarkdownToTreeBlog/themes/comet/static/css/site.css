@@ -64,8 +64,8 @@ article{
 }
 .fig-img figcaption,#qrcode figcaption{
     text-align: center;
-    font-size: 13px;
-    margin-top: 8px;
+    font-size: 12px;
+    margin-top: 4px;
     color: #999;
 }
 
@@ -306,7 +306,7 @@ ol#index-tree>li{
     padding: 1rem;
     box-sizing: border-box;
 }
-.article-meta,article .end-tip, article .article-link,.fig-img figcaption,#qrcode figcaption{
+.article-meta,article .end-tip, article .article-link{
     font-size: 13px;        
 }
 #site-header a,footer p, ol#index-tree, ol#index-tree a {
@@ -362,7 +362,7 @@ ol#index-tree>li{
     #site-header a,footer p, ol#index-tree, ol#index-tree a {
         font-size: 14px;
     }
-    .article-meta,article .end-tip, article .article-link,.fig-img figcaption,#qrcode figcaption,footer p{
+    .article-meta,article .end-tip, article .article-link,footer p{
         font-size: 14px;        
     }
     article{
@@ -389,5 +389,9 @@ ol#index-tree>li{
     }
     h4 {
         font-size: 15px;
+    }
+    .fig-img figcaption,#qrcode figcaption{
+        font-size: 13px;
+        margin-top: 6px;
     }
 }
