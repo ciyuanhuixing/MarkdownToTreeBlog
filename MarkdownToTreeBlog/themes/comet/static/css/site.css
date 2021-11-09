@@ -65,7 +65,7 @@ article{
 .fig-img figcaption,#qrcode figcaption{
     text-align: center;
     font-size: 12px;
-    margin-top: 4px;
+    margin-top: 2px;
     color: #999;
 }
 
@@ -114,7 +114,7 @@ article dl{
 }
 
 article header{
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .article-meta{
@@ -392,6 +392,6 @@ ol#index-tree>li{
     }
     .fig-img figcaption,#qrcode figcaption{
         font-size: 13px;
-        margin-top: 6px;
+        margin-top: 4px;
     }
 }
