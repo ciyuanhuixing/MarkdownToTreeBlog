@@ -76,7 +76,7 @@ a {
 
 h1{
     font-size: 17px;
-    margin: 1.5rem 0;
+    margin: 1.2rem 0;
     text-align: center;
     font-weight: bold;
     line-height: 1.6;
@@ -114,7 +114,7 @@ article dl{
 }
 
 article header{
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
 }
 
 .article-meta{
@@ -229,17 +229,17 @@ article .end-tip, article .article-link, #qrcode, footer p{
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 0;
-    margin-top: 3rem;
+    margin-top: 2.2rem;
 }
 #pre-next div{
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
 }
 #pre-next div:first-child a{
     padding-right: 1rem;
 }
 
 footer{
-    margin: 3rem auto;
+    margin: 2.2rem auto;
     padding: 0 16px;
 }
 
@@ -318,7 +318,7 @@ ol#index-tree>li{
         padding: 0 10px;
     }
     article{
-        padding: 14px;
+        padding: 1rem 14px;
     }
     ol#index-tree>li{
         border-radius: 0;
@@ -331,8 +331,7 @@ ol#index-tree>li{
         margin: 6px 0;
     }
     footer {
-        margin: 40px auto;
-        padding: 0 10px;
+        padding: 0 14px;
     }
     table {
         font-size: 12px;
