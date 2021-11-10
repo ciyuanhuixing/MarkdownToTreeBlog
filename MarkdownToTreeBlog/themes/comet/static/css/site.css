@@ -39,7 +39,7 @@ a#site-brand::after{
 #site-header a{
     color: #222;
     padding: 0;
-    line-height: 50px;
+    line-height: 42px;
     vertical-align: middle;
 }
 #site-header a:hover{
@@ -76,7 +76,7 @@ a {
 
 h1{
     font-size: 17px;
-    margin: 1.2rem 0;
+    margin: 1rem 0 1.2rem;
     text-align: center;
     font-weight: bold;
     line-height: 1.6;
@@ -229,17 +229,17 @@ article .end-tip, article .article-link, #qrcode, footer p{
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 0;
-    margin-top: 2.2rem;
+    margin-top: 2rem;
 }
 #pre-next div{
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
 }
 #pre-next div:first-child a{
     padding-right: 1rem;
 }
 
 footer{
-    margin: 2.2rem auto;
+    margin: 2rem auto;
     padding: 0 16px;
 }
 
@@ -373,7 +373,7 @@ ol#index-tree>li{
         width: 800px;
     }
     .fig-img img{
-        max-height: 90vh;
+        max-height: 75vh;
     }
     /* .article-body>ul,.article-body>ol,.article-body>ul p,.article-body>ol p{
         font-size: 14px;
