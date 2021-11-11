@@ -296,6 +296,9 @@ span.t-num {
 span.t-num:after{
     content: '\00A0\00A0';
 }
+#site-header span.t-num:after{
+    content: '\00A0';
+}
 span.date:before{
     content: '\00A0\00A0';
 }
