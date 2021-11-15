@@ -11,6 +11,10 @@ body {
     background-color: #f5f5f5;
 }
 
+.article-meta,.fig-img figcaption,#qrcode figcaption,.footnotes,.footnotes p,.footnotes a,footer p{
+    color: #99a2aa;
+}
+
 #site-header{
     width: 100%;
     padding: 0 20px;
@@ -64,9 +68,10 @@ article{
 }
 .fig-img figcaption,#qrcode figcaption{
     text-align: center;
-    font-size: 12px;
     margin-top: 2px;
-    color: #99a2aa;
+}
+.fig-img figcaption,#qrcode figcaption,.footnotes,.footnotes p{
+    font-size: 12px;
 }
 
 a {
@@ -103,7 +108,8 @@ article blockquote,
 article table,
 article pre,
 #pre-next,
-article figure {
+article figure,
+article hr {
     margin: 1rem 8px;
 }
 
@@ -122,7 +128,6 @@ article header{
     justify-content: center;
     flex-wrap: wrap;
     font-size: 14px;
-    color: #99a2aa;
 }
 .article-meta span{
     margin: 0 20px;
@@ -160,7 +165,7 @@ ol ol, ul ul, ol ul, ul ol{
 li p{
     margin: 0;
 }
-.article-body>ul,.article-body>ol{
+.article-body>ul,.article-body>ol,.article-body .footnotes>ol{
     padding-left: 1.25em;
 }
 /* .article-body>ul,.article-body>ol,.article-body>ul p,.article-body>ol p{
@@ -215,6 +220,10 @@ table tr td {
     padding: 6px 13px;
 }
 
+.footnotes{
+    margin-top: 2rem;
+}
+
 article .end-tip{
     margin-top: 3rem;
 }
@@ -243,7 +252,7 @@ footer{
     padding: 0 16px;
 }
 footer p{
-    color: #99a2aa;
+    font-size: 10px;
 }
 
 ol#index-tree, ol#index-tree ol{
@@ -316,9 +325,10 @@ ol#index-tree>li{
 .article-meta,article .end-tip, article .article-link{
     font-size: 13px;        
 }
-#site-header a,footer p, ol#index-tree, ol#index-tree a {
+#site-header a, ol#index-tree, ol#index-tree a {
     font-size: 12px;
 }
+
 @media (max-width: 768px) {
     #site-header{
         padding: 0 10px;
@@ -365,10 +375,10 @@ ol#index-tree>li{
     html,p{
         font-size: 15px;
     }
-    #site-header a,footer p, ol#index-tree, ol#index-tree a {
+    #site-header a, ol#index-tree, ol#index-tree a {
         font-size: 14px;
     }
-    .article-meta,article .end-tip, article .article-link,footer p{
+    .article-meta,article .end-tip, article .article-link{
         font-size: 14px;        
     }
     article{
@@ -397,7 +407,12 @@ ol#index-tree>li{
         font-size: 15px;
     }
     .fig-img figcaption,#qrcode figcaption{
-        font-size: 13px;
         margin-top: 4px;
+    }
+    .fig-img figcaption,#qrcode figcaption,.footnotes,.footnotes p{
+        font-size: 13px;
+    }
+    footer p{
+        font-size: 12px;
     }
 }
