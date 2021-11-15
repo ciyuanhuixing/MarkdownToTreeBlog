@@ -11,8 +11,11 @@ body {
     background-color: #f5f5f5;
 }
 
-.article-meta,.fig-img figcaption,#qrcode figcaption,.footnotes,.footnotes p,.footnotes a,footer p{
+.article-meta,.fig-img figcaption,#qrcode figcaption,.footnotes,.footnotes p,.footnotes a{
     color: #99a2aa;
+}
+footer p{
+    color: #bbb;
 }
 
 #site-header{
