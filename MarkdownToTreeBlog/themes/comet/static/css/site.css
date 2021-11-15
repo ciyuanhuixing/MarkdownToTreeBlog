@@ -144,7 +144,7 @@ code{
 }
 
 hr {
-    height: 2px;
+    height: 1px;
     padding: 0;
     margin: 16px 0;
     background-color: #e7e7e7;
@@ -180,7 +180,7 @@ ol.toc li{
 
 blockquote {
     border-left: 2px solid #178bcfa6;
-    padding: 0 15px;
+    padding: 0 0 0 12px;
 }
 blockquote p{
     margin: 0;
@@ -248,7 +248,7 @@ article .end-tip, article .article-link, #qrcode, footer p{
 }
 
 footer{
-    margin: 2rem auto;
+    margin: 1.5rem auto;
     padding: 0 16px;
 }
 footer p{
@@ -325,7 +325,7 @@ ol#index-tree>li{
 .article-meta,article .end-tip, article .article-link{
     font-size: 13px;        
 }
-#site-header a, ol#index-tree, ol#index-tree a {
+#site-header a, ol#index-tree, ol#index-tree a,#pre-next{
     font-size: 12px;
 }
 
@@ -375,7 +375,7 @@ ol#index-tree>li{
     html,p{
         font-size: 15px;
     }
-    #site-header a, ol#index-tree, ol#index-tree a {
+    #site-header a, ol#index-tree, ol#index-tree a,#pre-next{
         font-size: 14px;
     }
     .article-meta,article .end-tip, article .article-link{
