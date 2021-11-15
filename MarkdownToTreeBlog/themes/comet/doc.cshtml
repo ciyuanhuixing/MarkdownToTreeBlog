@@ -46,15 +46,15 @@
         }
         @Raw(Model.Doc.Content)
         @*<p class="end-tip">本文完</p>
-        <p class="article-link">作者：<a href="@Model.CommonInfo.SiteURL">@Raw(Model.CommonInfo.Author)</a>，链接：<a href="@Model.Doc.URL">@Model.CommonInfo.URL</a></p>
-        <figure id="qrcode"></figure>*@
+            <p class="article-link">作者：<a href="@Model.CommonInfo.SiteURL">@Raw(Model.CommonInfo.Author)</a>，链接：<a href="@Model.Doc.URL">@Model.CommonInfo.URL</a></p>
+            <figure id="qrcode"></figure>*@
     </div>
     @if (Model.Doc.Previous != null || Model.Doc.Next != null)
     {
         <div id="pre-next">
             @if (Model.Doc.Previous != null)
             {
-                <div>上篇：<a href="@Model.Doc.Previous.URL">@Raw(Model.Doc.Previous.Title)</a></div>
+                <div>上篇：<a href="@Model.Doc.Previous.URL">@Raw(Model.Doc.Previous.Title)</a>@(Model.Doc.Previous.OrderInSibling==Model.Doc.Previous.Parent.Children.Count?"（跨分类）":string.Empty)</div>
             }
             else
             {
@@ -62,7 +62,7 @@
             }
             @if (Model.Doc.Next != null)
             {
-                <div>下篇：<a href="@Model.Doc.Next.URL">@Raw(Model.Doc.Next.Title)</a></div>
+                <div>下篇：<a href="@Model.Doc.Next.URL">@Raw(Model.Doc.Next.Title)</a>@(Model.Doc.OrderInSibling==Model.Doc.Parent.Children.Count? "（跨分类）" : string.Empty)</div>
             }
             else
             {
@@ -75,19 +75,19 @@
     <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.0/build/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     @*<script src="https://cdn.jsdelivr.net/gh/zydhx/files@main/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/zydhx/files@main/qrcode.min.js"></script>
-    <script type="text/javascript">
-        var fig = document.getElementById("qrcode");
-        var qrcode = new QRCode(fig, {
-            text: "@Model.CommonInfo.URL",
-            width: 128,
-            height: 128,
-            colorDark: "#000000",
-            colorLight: "#ffffff",
-            correctLevel: QRCode.CorrectLevel.H
-        });
-        var figCap = document.createElement("figcaption");
-        figCap.innerText = "长按扫码查看本文";
-        fig.appendChild(figCap);
-    </script>*@
+        <script src="https://cdn.jsdelivr.net/gh/zydhx/files@main/qrcode.min.js"></script>
+        <script type="text/javascript">
+            var fig = document.getElementById("qrcode");
+            var qrcode = new QRCode(fig, {
+                text: "@Model.CommonInfo.URL",
+                width: 128,
+                height: 128,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            var figCap = document.createElement("figcaption");
+            figCap.innerText = "长按扫码查看本文";
+            fig.appendChild(figCap);
+        </script>*@
 }

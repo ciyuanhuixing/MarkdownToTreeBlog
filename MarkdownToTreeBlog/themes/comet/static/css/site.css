@@ -243,9 +243,6 @@ article .end-tip, article .article-link, #qrcode, footer p{
 #pre-next div{
     margin-bottom: 1rem;
 }
-#pre-next div:first-child a{
-    padding-right: 1rem;
-}
 
 footer{
     margin: 1rem auto;
