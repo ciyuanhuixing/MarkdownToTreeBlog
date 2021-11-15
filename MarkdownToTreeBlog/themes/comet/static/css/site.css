@@ -223,6 +223,9 @@ table tr td {
 .footnotes{
     margin-top: 2rem;
 }
+.footnotes hr{
+    margin-bottom: 0.5rem;
+}
 
 article .end-tip{
     margin-top: 3rem;
