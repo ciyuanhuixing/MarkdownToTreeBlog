@@ -351,6 +351,7 @@ ol#index-tree>li{
     }
     footer {
         padding: 0 14px;
+        display: none;
     }
     table {
         font-size: 12px;
