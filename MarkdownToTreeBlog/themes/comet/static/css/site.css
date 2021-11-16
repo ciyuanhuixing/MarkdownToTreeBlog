@@ -229,6 +229,15 @@ table tr td {
 .footnotes hr{
     margin-bottom: 0.5rem;
 }
+.footnote-ref sup::before{
+    content: '\005b';
+}
+.footnote-ref sup::after{
+    content: '\005d';
+}
+.footnotes ol li::marker{
+    content: "["counter(list-item)"] "; 
+}
 
 article .end-tip{
     margin-top: 3rem;
