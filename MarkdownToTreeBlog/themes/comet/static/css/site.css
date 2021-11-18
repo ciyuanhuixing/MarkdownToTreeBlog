@@ -56,7 +56,7 @@ a#site-brand::after{
 article{
     margin: 10px auto;
     background-color: white;
-    padding: 8px 1rem;
+    padding: 1rem;
     box-sizing: border-box;
 }
 
@@ -344,9 +344,6 @@ ol#index-tree>li{
 @media (max-width: 768px) {
     #site-header{
         padding: 0 10px;
-    }
-    article{
-        padding: 14px;
     }
     ol#index-tree>li{
         border-radius: 0;
