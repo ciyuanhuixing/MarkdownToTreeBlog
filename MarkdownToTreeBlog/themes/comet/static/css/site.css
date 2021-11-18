@@ -46,7 +46,7 @@ a#site-brand::after{
 #site-header a{
     color: #222;
     padding: 0;
-    line-height: 36px;
+    line-height: 38px;
     vertical-align: middle;
 }
 #site-header a:hover{
@@ -346,7 +346,7 @@ ol#index-tree>li{
         padding: 0 10px;
     }
     article{
-        padding: 5px 14px;
+        padding: 10px 14px;
     }
     ol#index-tree>li{
         border-radius: 0;
