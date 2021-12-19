@@ -1,4 +1,4 @@
-[树形分类博客生成器](https://github.com/ciyuanhuixing/MarkdownToTreeBlog)是我写的一个静态网站生成器，可以将一些 Markdown 格式的笔记文件转换为一个具有树形分类目录的笔记类博客，树形目录按照 Markdown 文件的存储路径来生成。
+[树形分类博客生成器](https://github.com/ciyuanhuixing/MarkdownToTreeBlog)是一个静态网站生成器，可以将一些 Markdown 格式的笔记文件转换为一个具有树形分类目录的笔记类博客，树形目录按照 Markdown 文件的存储路径来生成。
 
 生成博客示例：[次元彗星的笔记](https://ciyuanhuixing.com/)。
 
