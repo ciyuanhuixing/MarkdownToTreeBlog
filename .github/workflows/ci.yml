@@ -19,7 +19,7 @@ jobs:
       - name: Run with dotnet
         shell: bash
         env:
-          GH_TOKEN: ${{ secrets.repo }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git clone --depth 1 https://github.com/ciyuanhuixing/MarkdownToTreeBlog.git
           git clone --depth 1 https://github.com/ciyuanhuixing/Notes.git
