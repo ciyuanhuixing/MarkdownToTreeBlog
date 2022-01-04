@@ -12,10 +12,10 @@ namespace MarkdownToTreeBlog
 {
     class Program
     {
-        private const string _siteURL = "https://ciyuanhuixing.com";
-        private const string _siteName = "次元彗星的笔记";
-        private const string _author = "次元彗星";
-        private const string _siteDescription = "这里记录了一些我对编程的学习、经验总结，还有对生活的一点思考。";
+        private static readonly string _siteURL = ConfigurationManager.AppSettings["SiteURL"];
+        private static readonly string _siteName = ConfigurationManager.AppSettings["SiteName"];
+        private static readonly string _author = ConfigurationManager.AppSettings["Author"];
+        private static readonly string _siteDescription = ConfigurationManager.AppSettings["SiteDescription"];
         private const string _theme = "comet";
         private const string _siteDir = "site";
 
