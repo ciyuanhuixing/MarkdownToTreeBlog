@@ -25,13 +25,13 @@ namespace MarkdownToTreeBlog
             set
             {
                 base.Name = value;
-                Match match = Regex.Match(base.Name, @"\d{8}-\d{4}");
+                Match match = Regex.Match(base.Name, @"\d{4}-\d{4}-\d{4}");
                 if (!match.Success) throw new Exception($"「{base.Name}」这个文件命名不符合规则。");
                 string year = match.Value.Substring(0, 4);
-                string month = match.Value.Substring(4, 2);
-                string day = match.Value.Substring(6, 2);
-                string hour = match.Value.Substring(9,2);
-                string minute = match.Value.Substring(11,2);
+                string month = match.Value.Substring(5, 2);
+                string day = match.Value.Substring(7, 2);
+                string hour = match.Value.Substring(10,2);
+                string minute = match.Value.Substring(12,2);
                 string dateTime = $"{year}-{month}-{day} {hour}:{minute}:00";
                 DateTime dt;
                 if (!DateTime.TryParse(dateTime, out dt)) throw new Exception($"「{Name}」这个文件命名中的时间格式不符合规则。");
