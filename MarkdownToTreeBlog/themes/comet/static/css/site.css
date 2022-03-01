@@ -4,7 +4,7 @@ html, p {
     text-align: justify;
     line-height: 1.6;
     color: #222;
-    word-break: break-word;
+    word-break: break-all;
 }
 body {
     margin: 0;
